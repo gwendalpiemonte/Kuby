@@ -1,12 +1,13 @@
 package ch.heigvd;
 
+import ch.heigvd.ImageGenerator.ImageGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Main {
     public static void main(String[] args) {
-        Logger logger = LoggerFactory.getLogger(Main.class);
+        ImageGenerator img = new ImageGenerator(1000,1000);
 
-        logger.debug("Hello World!");
+        img.GenerateImage();
     }
 }
