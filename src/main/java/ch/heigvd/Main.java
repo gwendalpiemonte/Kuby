@@ -1,8 +1,8 @@
 package ch.heigvd;
-
 import picocli.CommandLine;
-
 import java.io.File;
+
+
 
 @CommandLine.Command(name = "ByteToImage", mixinStandardHelpOptions = true, version = "0.1",
         description = "Utilitaire pour convertir un media en image", subcommands = { Main.TextToImage.class, Main.MusicToImage.class})
@@ -20,11 +20,11 @@ public class Main {
         @CommandLine.Option(names = {"-c", "--color"}, required = false, description = "Couleur de l'image générée.")
         private String couleur;
 
-        @CommandLine.Option(names = {"-h", "--hight"}, required = false, description = "Couleur de l'image générée.")
-        private String hauteur;
+        @CommandLine.Option(names = {"-h", "--hight"}, required = false, description = "Hauteur de l'image générée.")
+        private int hauteur;
 
         @CommandLine.Option(names = {"-w", "--width"}, required = false, description = "Largeur de l'image générée.")
-        private String largeur;
+        private int largeur;
 
         @Override
         public void run() {
@@ -48,11 +48,11 @@ public class Main {
         @CommandLine.Option(names = {"-c", "--color"}, required = false, description = "Couleur de l'image générée.")
         private String couleur;
 
-        @CommandLine.Option(names = {"-h", "--hight"}, required = false, description = "Couleur de l'image générée.")
-        private String hauteur;
+        @CommandLine.Option(names = {"-h", "--hight"}, required = false, description = "Hauteur de l'image générée.")
+        private int hauteur;
 
         @CommandLine.Option(names = {"-w", "--width"}, required = false, description = "Largeur de l'image générée.")
-        private String largeur;
+        private int largeur;
 
         @Override
         public void run() {
