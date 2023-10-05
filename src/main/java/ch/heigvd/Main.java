@@ -6,8 +6,10 @@ import org.slf4j.LoggerFactory;
 
 public class Main {
     public static void main(String[] args) {
-        ImageGenerator img = new ImageGenerator(1000,1000);
 
+        String prompt = "abc xyz";
+
+        ImageGenerator img = new ImageGenerator("images",100, 100, prompt.getBytes(), "green");
         img.GenerateImage();
     }
 }
