@@ -1,4 +1,10 @@
 package ch.heigvd;
+
+import ch.heigvd.ImageGenerator.ImageGenerator;
+import ch.heigvd.TextToImage.TextToImage;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import picocli.CommandLine;
 import java.io.File;
 
