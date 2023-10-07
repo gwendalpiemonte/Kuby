@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         CommandLine main = new CommandLine(new PicoCLI());
         main.execute(args);
-        System.out.println("Conversion done!");
+        //System.out.println("Conversion done!");
     }
 }
 

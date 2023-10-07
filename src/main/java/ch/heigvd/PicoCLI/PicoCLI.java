@@ -1,5 +1,6 @@
 package ch.heigvd.PicoCLI;
 
+import ch.heigvd.MusicToImage.MusicToImage;
 import ch.heigvd.TextToImage.TextToImage;
 import picocli.CommandLine;
 
@@ -75,39 +76,39 @@ public class PicoCLI {
                 required = true,
                 description = "Path to the input file.")
 
-        private File inputFile;
+        private String inputFile;
 
         @CommandLine.Option(
                 names = {"-o", "--output"},
                 required = true,
                 description = "Path to the folder where the image will be generated.")
 
-        private File outputFile;
+        private String outputFile;
 
         @CommandLine.Option(
                 names = {"-c", "--color"},
                 required = false,
                 description = "Values = [blue, green, yellow, red, random] : Color of the generated image.")
 
-        private String couleur;
+        private String color;
 
         @CommandLine.Option(
                 names = {"-h", "--hight"},
                 required = false,
                 description = "Height of the generated image.")
 
-        private int hauteur;
+        private int height;
 
         @CommandLine.Option(
                 names = {"-w", "--width"},
                 required = false,
                 description = "Width of the generated image.")
 
-        private int largeur;
+        private int width;
 
         @Override
         public void run() {
-            //new TextToImage(inputFile, width, height, outputFile, color);
+            new MusicToImage(inputFile, width, height, outputFile, color);
         }
     }
 }
