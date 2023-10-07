@@ -1,6 +1,5 @@
 # Kuby : Image generator with a media
 
-***
 
 ## Description
 In this project you will find an implementation of a CLI tool that can create an image based on a media.
@@ -8,18 +7,15 @@ In this project you will find an implementation of a CLI tool that can create an
 ### If time permits
 We would like to implement a music analysing tool that read all the bytes of a music and influence the seed to generate an image.
 
-***
 
 ## Installation
 blablabla
 
-***
 
 ## Usage
 In this CLI we have two main command the first one to make a conversion from a text to an image
 and the second one from a music to an image.
 
-***
 
 ## Commands
 
@@ -56,7 +52,6 @@ If we don't use the options there is default value for each of them :
   Specifies the width of the generated image in pixels.   
   Default value -> 100
 
-***
 
 ## Examples
 
@@ -70,7 +65,6 @@ java -jar kuby.jar text -i input.txt -o output
 java -jar kuby.jar music -i input.txt -o output -c yellow -h 100 -w 200
 ```
 
-***
 
 ## Return Codes
 
