@@ -33,7 +33,7 @@ java -jar <path-to-jar> music <inputFile> <outputFile>
 
 ### Parameters
 
-- `-i ,--input  <outputFile>`: Path to the input file (the one who contain the text we want to converse).
+- `-i ,--input  <outputFile>`: Path to the input file (the one who contain the media we want to converse).
 - `-o ,--output   <outputFile>`: Path to the folder where the image will be generated.
 
 ### Options
