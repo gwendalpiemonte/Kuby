@@ -18,8 +18,8 @@ public class MusicToImage {
      */
     public MusicToImage(String inputPath, int width, int height, String outputPath, String colorProfile) {
         readBytes(inputPath);
-        //ImageGenerator imageGenerator = new ImageGenerator(outputPath, width, height, readBytes(inputPath), colorProfile);
-        //imageGenerator.GenerateImage();
+        ImageGenerator imageGenerator = new ImageGenerator(outputPath, width, height, readBytes(inputPath), colorProfile);
+        imageGenerator.GenerateImage();
     }
 
     // Read bytes from the music given in the inputPath
@@ -44,11 +44,6 @@ public class MusicToImage {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        System.out.println(data.length);
-        //for(int i = 0; i< data.length; ++i){
-        //    System.out.println(data[i]);
-        //}
 
         return data;
     }

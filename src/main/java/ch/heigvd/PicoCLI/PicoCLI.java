@@ -7,7 +7,7 @@ import picocli.CommandLine;
 import java.io.File;
 
 @CommandLine.Command(
-        name = "ByteToImage",
+        name = "Kuby - Transform your text or music to beautiful colored pixel!",
         version = "0.1",
         description = "Utility to convert media into an image",
         subcommands = { PicoCLI.ConvertTextToImage.class, PicoCLI.ConvertMusicToImage.class},
@@ -90,21 +90,21 @@ public class PicoCLI {
                 required = false,
                 description = "Values = [blue, green, yellow, red, random] : Color of the generated image.")
 
-        private String color;
+        private String color = "";
 
         @CommandLine.Option(
                 names = {"-h", "--hight"},
                 required = false,
                 description = "Height of the generated image.")
 
-        private int height;
+        private int height = 100;
 
         @CommandLine.Option(
                 names = {"-w", "--width"},
                 required = false,
                 description = "Width of the generated image.")
 
-        private int width;
+        private int width = 100;
 
         @Override
         public void run() {
