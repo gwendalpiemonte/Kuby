@@ -10,15 +10,23 @@ import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import javax.imageio.ImageIO;
 
+/**
+ * Tools to generate an image based on a byte array.
+ */
 public class ImageGenerator
 {
     private final byte[] data;
     private final int imgWidth, imgHeight;
-    private String outputPath;
+    private final String outputPath;
     private final ColorProfiles colorPaletteChoosen;
+
+    // Magic number is used to make colors lighter
     private static final int MAGIC_NUMBER = 70;
 
 
+    /**
+     * Enum to manage different profile colors.
+     */
     private enum ColorProfiles {
         // Also add colors here
         YELLOW(150,150,1),
@@ -123,9 +131,10 @@ public class ImageGenerator
             }
         }
 
-        // write image
+        // Write image
         try
         {
+            // Image name will be kuby "width of image" x "height of image".png
             f = new File(outputPath + "/kuby" + imgWidth + "x" + imgHeight + ".png");
             ImageIO.write(img, "png", f);
         }
