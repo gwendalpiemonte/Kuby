@@ -1,57 +1,49 @@
-# Kuby : Image generator with a media
+# Kuby - Transform text or music into stunning colorful images
 
 
 ## Description
-In this project you will find an implementation of a CLI tool that can create an image based on a media.
-
-### If time permits
-We would like to implement a music analysing tool that read all the bytes of a music and influence the seed to generate an image.
-
-
-## Installation
-blablabla
-
+Kuby is a command-line interface (CLI) that enables the creation of captivating images from text files (.txt) or music files (.mp3).
 
 ## Usage
-In this CLI we have two main command the first one to make a conversion from a text to an image
-and the second one from a music to an image.
-
+Kuby offers two primary commands for conversions: text-to-image and music-to-image.
 
 ## Commands
 
-### Sentance -> Image
+### Text to image
 
 ```sh
-java -jar <path-to-jar> text <inputFile> <outputFile>
+java -jar <path-to-jar> text -i <inputFile> -o <outputFile>
 ```
 
-### Music -> Image
+### Music to image
 
 ```sh
-java -jar <path-to-jar> music <inputFile> <outputFile>
+java -jar <path-to-jar> music -i <inputFile> -o <outputFile>
 ```
 
 ### Parameters
 
-- `-i ,--input  <outputFile>`: Path to the input file (the one who contain the media we want to converse).
-- `-o ,--output   <outputFile>`: Path to the folder where the image will be generated.
+- `-i, --input <outputFile>`: Specifies the path to the input file containing the text or music to be converted.
+- `-o, --output <outputFile>`: Specifies the path to the folder where the generated image will be saved.
 
 ### Options
-If we don't use the options there is default value for each of them :
-- `-c ,--color  <color> Values = [blue, green, yellow, red, random]`[Optional]    
-  Specifies the main color of the generated image.   
-  Default value -> random
+If no options are provided, default values are used for each of them:
 
+**Color**: Specifies the primary color of the generated image.
 
-- `-h ,--height <color>`: [Optional]   
-  Specifies the height of the generated image in pixels   
-  Default value -> 100
+- Tag: `-c, --color`
+- Values: `<color> [blue, green, yellow, red, random]`
+- Default value: `random`
 
+**Height**: Specifies the height of the generated image in pixels.
 
-- `-w ,--width  <color>`: [Optional]   
-  Specifies the width of the generated image in pixels.   
-  Default value -> 100
+- Tag: `-h, --height`
+- Default value: `100`
 
+**Width**: Specifies the width of the generated image in pixels.
+
+- Tag: `-w, --width`
+- Default value: `100`
 
 ## Examples
 
@@ -64,9 +56,3 @@ java -jar kuby.jar text -i input.txt -o output
 ```sh
 java -jar kuby.jar music -i input.txt -o output -c yellow -h 100 -w 200
 ```
-
-
-## Return Codes
-
-blablabla
-
