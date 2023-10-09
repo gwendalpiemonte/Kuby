@@ -52,7 +52,7 @@ If no options are provided, default values are used for each of them:
 ```sh
 java -jar kuby.jar text -i input.txt -o output
 ```
-Résultat :   
+Result :   
 
 ![Sortie](images/kuby100x100.png)
 ### Conversion from a music to a yellow image with a height of 100 and a width of 200.
@@ -60,6 +60,6 @@ Résultat :
 ```sh
 java -jar kuby.jar music -i input.txt -o output -c yellow -h 100 -w 200
 ```
-Résultat :
+Result :
 
 ![Sortie](images/kuby200x100.png)

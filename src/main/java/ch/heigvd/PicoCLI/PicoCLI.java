@@ -8,7 +8,7 @@ import java.io.File;
 
 @CommandLine.Command(
         name = "Kuby - Transform your text or music to beautiful colored pixel!",
-        version = "0.1",
+        version = "1.0",
         description = "Utility to convert media into an image",
         subcommands = { PicoCLI.ConvertTextToImage.class, PicoCLI.ConvertMusicToImage.class},
         mixinStandardHelpOptions = true)
@@ -16,7 +16,7 @@ import java.io.File;
 public class PicoCLI {
     @CommandLine.Command(
             name = "text",
-            version = "0.1",
+            version = "1.0",
             description = "Conversion of a text file into an image.",
             mixinStandardHelpOptions = true)
 
@@ -59,14 +59,23 @@ public class PicoCLI {
 
         @Override
         public void run() {
-            new TextToImage(inputFile, width, height, outputFile, color);
-            System.out.println("Successful conversion !");
+
+            Timer timer = new Timer();
+
+            if(inputFile != null && outputFile != null) {
+                new TextToImage(inputFile, width, height, outputFile, color);
+                System.out.println("Successful conversion !");
+                timer.Stop();
+            } else {
+                System.out.println("Input or output file can't be null.");
+                timer.Abort();
+            }
         }
     }
 
     @CommandLine.Command(
             name = "music",
-            version = "0.1",
+            version = "1.0",
             description = "Conversion of music into an image.",
             mixinStandardHelpOptions = true)
 
@@ -76,7 +85,6 @@ public class PicoCLI {
                 names = {"-i", "--input"},
                 required = true,
                 description = "Path to the input file.")
-
         private String inputFile;
 
         @CommandLine.Option(
@@ -109,8 +117,31 @@ public class PicoCLI {
 
         @Override
         public void run() {
-            new MusicToImage(inputFile, width, height, outputFile, color);
-            System.out.println("Successful conversion !");
+
+            Timer timer = new Timer();
+
+            if(inputFile != null && outputFile != null) {
+                new MusicToImage(inputFile, width, height, outputFile, color);
+                System.out.println("Successful conversion !");
+                timer.Stop();
+            } else {
+                System.out.println("Input or output file can't be null.");
+                timer.Abort();
+            }
+        }
+    }
+
+    private static class Timer{
+        long startTime, endTime;
+        public Timer(){
+            startTime = System.currentTimeMillis();
+        }
+        public void Abort() {
+            endTime = System.currentTimeMillis();
+        }
+        public void Stop() {
+            Abort();
+            System.out.println("Execution time: " + (endTime - startTime) + " millisecondes");
         }
     }
 }
