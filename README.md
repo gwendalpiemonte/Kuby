@@ -1,5 +1,6 @@
 # Kuby - Transform text or music into stunning colorful images
 
+![Logo](images/kuby1000x200.png)
 
 ## Description
 Kuby is a command-line interface (CLI) that enables the creation of captivating images from text files (.txt) or music files (.mp3).
@@ -21,12 +22,12 @@ java -jar <path-to-jar> text -i <inputFile> -o <outputFile>
 java -jar <path-to-jar> music -i <inputFile> -o <outputFile>
 ```
 
-### Parameters
+### Required options
 
 - `-i, --input <outputFile>`: Specifies the path to the input file containing the text or music to be converted.
 - `-o, --output <outputFile>`: Specifies the path to the folder where the generated image will be saved.
 
-### Options
+### Not required options
 If no options are provided, default values are used for each of them:
 
 **Color**: Specifies the primary color of the generated image.
@@ -51,8 +52,14 @@ If no options are provided, default values are used for each of them:
 ```sh
 java -jar kuby.jar text -i input.txt -o output
 ```
+Result :   
+
+![Sortie](images/kuby100x100.png)
 ### Conversion from a music to a yellow image with a height of 100 and a width of 200.
 
 ```sh
 java -jar kuby.jar music -i input.txt -o output -c yellow -h 100 -w 200
 ```
+Result :
+
+![Sortie](images/kuby200x100.png)

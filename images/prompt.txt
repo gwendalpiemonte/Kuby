@@ -1,1 +1,3 @@
-Salut c'est mon test de génération d'image. J'espère que ça $ va marcher!!
+Kuby - Transform text or music into stunning colorful images
+Transform text or music into stunning colorful images! Kuby is a CLI tool made during our bachloor degree in computer science.
+Made by @gwendalpiemonte and @truebguillaume.
