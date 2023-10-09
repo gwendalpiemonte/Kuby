@@ -5,8 +5,11 @@
 ## Description
 Kuby is a command-line interface (CLI) that enables the creation of captivating images from text files (.txt) or music files (.mp3).
 
+## Installation
+Download the .jar file into the lastest [release](https://github.com/truebguillaume/Kuby/releases/tag/v1.0.0) and run the command explained into the Commands chapter. You can also download the source code and build the code with Maven but make sure to have included all dependencies.
+
 ## Usage
-Kuby offers two primary commands for conversions: text-to-image and music-to-image.
+Kuby offers two main commands for conversions: text-to-image and music-to-image.
 
 ## Commands
 
