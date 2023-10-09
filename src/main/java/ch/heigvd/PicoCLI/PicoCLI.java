@@ -7,9 +7,9 @@ import picocli.CommandLine;
 import java.io.File;
 
 @CommandLine.Command(
-        name = "Kuby - Transform your text or music to beautiful colored pixel!",
+        name = "Kuby - Transform text or music into stunning colorful images!",
         version = "1.0",
-        description = "Utility to convert media into an image",
+        description = "Kuby is a CLI tool made during our bachloor degree in computer science that will be able to convert a text or a music to a pixel designed image.",
         subcommands = { PicoCLI.ConvertTextToImage.class, PicoCLI.ConvertMusicToImage.class},
         mixinStandardHelpOptions = true)
 
@@ -21,40 +21,34 @@ public class PicoCLI {
             mixinStandardHelpOptions = true)
 
     public static class ConvertTextToImage implements Runnable {
-
         @CommandLine.Option(
                 names = {"-i", "--input"},
                 required = true,
                 description = "Path to the input file.")
-
         private String inputFile;
 
         @CommandLine.Option(
                 names = {"-o", "--output"},
                 required = true,
                 description = "Path to the folder where the image will be generated.")
-
         private String outputFile;
 
         @CommandLine.Option(
                 names = {"-c", "--color"},
                 required = false,
                 description = "Values = [blue, green, yellow, red, random] : Color of the generated image.")
-
         private String color = "";
 
         @CommandLine.Option(
                 names = {"-h", "--height"},
                 required = false,
                 description = "Height of the generated image.")
-
         private int height = 100;
 
         @CommandLine.Option(
                 names = {"-w", "--width"},
                 required = false,
                 description = "Width of the generated image.")
-
         private int width = 100;
 
         @Override
@@ -78,9 +72,7 @@ public class PicoCLI {
             version = "1.0",
             description = "Conversion of music into an image.",
             mixinStandardHelpOptions = true)
-
     public static class ConvertMusicToImage implements Runnable {
-
         @CommandLine.Option(
                 names = {"-i", "--input"},
                 required = true,
@@ -91,28 +83,24 @@ public class PicoCLI {
                 names = {"-o", "--output"},
                 required = true,
                 description = "Path to the folder where the image will be generated.")
-
         private String outputFile;
 
         @CommandLine.Option(
                 names = {"-c", "--color"},
                 required = false,
                 description = "Values = [blue, green, yellow, red, random] : Color of the generated image.")
-
         private String color = "";
 
         @CommandLine.Option(
                 names = {"-h", "--hight"},
                 required = false,
                 description = "Height of the generated image.")
-
         private int height = 100;
 
         @CommandLine.Option(
                 names = {"-w", "--width"},
                 required = false,
                 description = "Width of the generated image.")
-
         private int width = 100;
 
         @Override

@@ -22,12 +22,12 @@ java -jar <path-to-jar> text -i <inputFile> -o <outputFile>
 java -jar <path-to-jar> music -i <inputFile> -o <outputFile>
 ```
 
-### Parameters
+### Required options
 
 - `-i, --input <outputFile>`: Specifies the path to the input file containing the text or music to be converted.
 - `-o, --output <outputFile>`: Specifies the path to the folder where the generated image will be saved.
 
-### Options
+### Not required options
 If no options are provided, default values are used for each of them:
 
 **Color**: Specifies the primary color of the generated image.
