@@ -60,6 +60,7 @@ public class PicoCLI {
         @Override
         public void run() {
             new TextToImage(inputFile, width, height, outputFile, color);
+            System.out.println("Successful conversion !");
         }
     }
 
@@ -109,6 +110,7 @@ public class PicoCLI {
         @Override
         public void run() {
             new MusicToImage(inputFile, width, height, outputFile, color);
+            System.out.println("Successful conversion !");
         }
     }
 }

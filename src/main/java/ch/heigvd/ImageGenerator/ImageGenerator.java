@@ -91,6 +91,7 @@ public class ImageGenerator
      * Generate an image
      */
     public void GenerateImage() {
+
         // Create buffered image object
         BufferedImage img = null;
         img = new BufferedImage(imgWidth, imgHeight, BufferedImage.TYPE_INT_RGB);
@@ -138,9 +139,10 @@ public class ImageGenerator
             f = new File(outputPath + "/kuby" + imgWidth + "x" + imgHeight + ".png");
             ImageIO.write(img, "png", f);
         }
-        catch(IOException e)
-        {
-            System.out.println("Error: " + e);
+        catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+            System.exit(1);
         }
+
     }
 }
