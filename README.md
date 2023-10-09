@@ -1,5 +1,6 @@
 # Kuby - Transform text or music into stunning colorful images
 
+![Logo](images/kuby1000x200.png)
 
 ## Description
 Kuby is a command-line interface (CLI) that enables the creation of captivating images from text files (.txt) or music files (.mp3).
